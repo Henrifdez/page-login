@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 405px;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
+    border-radius: 12px;
+    padding: 45px 40px;
+    width: 300px;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+h1::after {
+    content: ' ';
+    bottom: 0px;
+    left: 0px;
+    width: 100px;
+    height: 2px;
+    background-color: blueviolet;
+}
+
+input {
+    height: 45px;
+    width: 97%;
+    padding-left: 10px;
+    border: none;
+    background-color: rgba(220, 220, 220, 0.253);
+    border-radius: 9px;
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: .6s;
+}
+
+input[type="password"] {
+    margin-bottom: 10px;
+}
+
+
+label {
+    position: absolute;
+    left: 50px;
+    transition: 0.5s;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nome {
+    top: 153px;
+}
+.senha {
+    top: 238px;
+}
+
+.links {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.links a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:nth-child(1) {
+    color: grey;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    color: rgb(61, 0, 141);
+    transform: translateX(0px) translateY(-34px);
+    font-size: 15px;
+}
+
+input[type="submit"] {
+    background-color: blueviolet;
+    color: #fff;
+    margin: auto;
+}
+
+@media screen and (width: 360px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+}
